@@ -1,0 +1,56 @@
+apply plugin: 'com.android.library'
+
+ext {
+  bintrayRepo = 'maven'
+  bintrayName = 'rrobbie'
+
+  publishedGroupId = 'com.github.rrobbie.nobug'
+  libraryName = 'nobug'
+  artifact = 'rrobbie'
+
+  libraryDescription = 'We have?some common parts?while?building apps.\n' +
+      'This library is for reducing the resource making those common parts, and it will enhance both productivity and stability of apps.'
+
+  siteUrl = 'https://github.com/rrobbie/nobug_'
+  gitUrl = 'https://github.com/rrobbie/nobug_.git'
+
+  libraryVersion = '0.0.1'
+
+  developerId = 'rrobbie'
+  developerName = 'JongHun Sun'
+  developerEmail = 'rrobbie1@naver.com'
+
+  licenseName = 'The Apache Software License, Version 2.0'
+  licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+  allLicenses = ["Apache-2.0"]
+}
+
+android {
+  compileSdkVersion 22
+  buildToolsVersion "23.0.0 rc2"
+
+  defaultConfig {
+    minSdkVersion 10
+    targetSdkVersion 22
+    versionCode 1
+    versionName "0.0.1"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile 'com.android.support:appcompat-v7:22.2.0'
+
+  compile 'com.squareup.picasso:picasso:2.5.+'
+  compile 'com.google.code.gson:gson:2.2.+'
+  compile 'com.loopj.android:android-async-http:1.4.+'
+}
+
+apply from: 'https://raw.githubusercontent.com/rrobbie/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/rrobbie/JCenter/master/bintrayv1.gradle'
