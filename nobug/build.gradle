@@ -2,19 +2,19 @@ apply plugin: 'com.android.library'
 
 ext {
   bintrayRepo = 'maven'
-  bintrayName = 'rrobbie'
+  bintrayName = 'nobug'
 
-  publishedGroupId = 'com.github.rrobbie.nobug'
+  publishedGroupId = 'com.github.rrobbie'
   libraryName = 'nobug'
-  artifact = 'rrobbie'
+  artifact = 'nobug'
 
   libraryDescription = 'We have?some common parts?while?building apps.\n' +
       'This library is for reducing the resource making those common parts, and it will enhance both productivity and stability of apps.'
 
-  siteUrl = 'https://github.com/rrobbie/nobug_'
-  gitUrl = 'https://github.com/rrobbie/nobug_.git'
+  siteUrl = 'https://github.com/rrobbie/NoBugInsight'
+  gitUrl = 'https://github.com/rrobbie/NoBugInsight.git'
 
-  libraryVersion = '0.0.1'
+  libraryVersion = '1.0.0'
 
   developerId = 'rrobbie'
   developerName = 'JongHun Sun'
@@ -33,7 +33,7 @@ android {
     minSdkVersion 10
     targetSdkVersion 22
     versionCode 1
-    versionName "0.0.1"
+    versionName "1.0.0"
   }
   buildTypes {
     release {
@@ -46,10 +46,18 @@ android {
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
   compile 'com.android.support:appcompat-v7:22.2.0'
+  compile 'com.android.support:design:22.2.0'
+  compile 'com.android.support:cardview-v7:22.2.0'
+  compile 'com.android.support:recyclerview-v7:22.2.0'
 
+
+  compile 'com.loopj.android:android-async-http:1.4.+'
+  compile 'io.nlopez.smartlocation:library:3.0.+'
   compile 'com.squareup.picasso:picasso:2.5.+'
   compile 'com.google.code.gson:gson:2.2.+'
-  compile 'com.loopj.android:android-async-http:1.4.+'
+
+  compile 'com.google.android.gms:play-services-analytics:7.5.+'
+//  compile 'com.google.android.gms:play-services-location:7.5.+'
 }
 
 apply from: 'https://raw.githubusercontent.com/rrobbie/JCenter/master/installv1.gradle'

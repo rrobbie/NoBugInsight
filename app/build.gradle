@@ -9,17 +9,48 @@ android {
     minSdkVersion 10
     targetSdkVersion 22
     versionCode 1
-    versionName "1.0"
+    versionName "1.0.0"
+
+    project.ext.set("archivesBaseName", "motel");
+
+    applicationVariants.all { variant ->
+      variant.outputs.each { output ->
+        output.outputFile = new File(
+            output.outputFile.parent,
+            output.outputFile.name.replace(".apk", "-${variant.versionName}.apk"))
+      }
+    }
+  }
+  signingConfigs {
+    release {
+      storeFile file("../yanolja.keystore")
+      storePassword "hmp1440"
+      keyAlias "yanolja"
+      keyPassword "hmp1440"
+    }
   }
   buildTypes {
     release {
-      minifyEnabled false
+      minifyEnabled true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
 }
 
+/*
+repositories {
+  maven {
+    url 'https://dl.bintray.com/rrobbie/maven/'
+  }
+}
+
+compile 'com.github.rrobbie:nobug:1.0.0'
+*/
+
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:22.2.0'
+  compile 'com.android.support:appcompat-v7:22.2.+'
+  compile 'com.android.support:design:22.2.+'
+
+  compile project(':nobug')
 }

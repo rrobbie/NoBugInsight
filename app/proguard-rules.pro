@@ -15,3 +15,13 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+ -dontshrink
+
+#  picasso warning 제거
+-dontwarn com.squareup.okhttp.**
+-dontwarn com.squareup.picasso.OkHttpDownloader
+
+# net 관련 warning 제거
+-dontwarn org.apache.http.entity.**
+-dontwarn com.nhn.android.maps.**

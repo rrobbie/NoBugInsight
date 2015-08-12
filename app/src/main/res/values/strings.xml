@@ -1,6 +1,40 @@
 <resources>
-  <string name="app_name">NoBugInsight</string>
+  <string name="app_name">NoBug</string>
+  <string name="action_settings">setting</string>
 
-  <string name="hello_world">Hello world!</string>
-  <string name="action_settings">Settings</string>
+<!-- 숙박 tab -->
+  <string name="stay_arround_popularity">주변인기</string>
+  <string name="stay_grand_open">Grand Open</string>
+  <string name="stay_recommend_stay">추천숙박</string>
+  <string name="stay_exhibition">기획전</string>
+
+  <!-- main menu tab -->
+  <string name="menu_motel">숙박</string>
+  <string name="menu_area">지역</string>
+  <string name="menu_surrounding">내주변</string>
+  <string name="menu_free">무료권</string>
+  <string name="menu_balloon">풍선존</string>
+
+  <!-- 지역 menu tab -->
+  <string name="area_find_area">지역별 찾기</string>
+  <string name="area_find_station">역주변 찾기</string>
+  <string name="area_find_theme">테마로 찾기</string>
+
+  <!-- 내주변 menu tab -->
+  <string name="surrounding_list">내주변 리스트</string>
+  <string name="surrounding_map">내주변 지도</string>
+
+  <!-- 위치 관련 -->
+  <string name="location_reset">재설정</string>
+  <string name="location_locate_mode">위치지정</string>
+
+  <!-- search view hint text -->
+  <string name="search_hint_text">검색어를 입력하세요</string>
+
+  <string name="cheese_ipsum">Jarlsberg lancashire edam. Dolcelatte hard cheese brie st. agur blue
+    cheese caerphilly bavarian bergkase cheese and biscuits mascarpone. Cheeseburger swiss bavarian
+    bergkase cream cheese fromage frais cheesy feet port-salut airedale. St. agur blue cheese rubber
+    cheese caerphilly cheddar cheesecake cream cheese manchego lancashire. Roquefort squirty cheese
+    the big cheese.</string>
+
 </resources>
